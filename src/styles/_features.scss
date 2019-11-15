@@ -1,0 +1,187 @@
+.features {
+    &_list {
+        @media screen and (min-width: 900px) {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 72px;
+        }
+    }
+    &_item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 48px;
+        &:first-of-type {
+            margin-top: 0;
+        }
+        @media screen and (min-width: 900px) {
+            margin-top: 0;
+            margin-left: 80px;
+            width: 33%;
+            flex-direction: row;
+            position: relative;
+            &:first-of-type {
+                margin-left: 0px;
+            }
+
+        }
+    }
+
+    &_icon {
+        height: 64px;
+        width: 64px;
+        position: relative;
+
+        @media screen and (min-width: 900px) {
+            height: 80px;
+            width: 80px;
+            flex-shrink: 0;
+        }
+
+        &-active {
+            &.active {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 10;
+            }
+        }
+        &-disactive {
+            &.active {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 10;
+            }
+            @media screen and (max-width: 900px) {
+                display: none;
+            }
+        }
+    }
+    &_shadow {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 95%;
+        height: 95%;
+        border-radius: 28% 28% 28% 32%/34% 30% 38% 38%;
+        box-shadow: 0 10px 30px 0 var(--box-shadow-color);
+        transition: all 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
+        z-index: 20;
+    }
+
+    &_body {
+        margin: 24px 0;
+        @media screen and (min-width: 900px) {
+            margin-left: 16px;
+            text-align: left;
+        }
+    }
+
+    &_title {
+        color: $black;
+
+        @media (max-width: 46.24em) {
+            font-size: 1.125rem;
+            line-height: 1.56;
+        }
+
+        @media (min-width: 46.25em) {
+            font-size: 1.25rem;
+            line-height: 1.4;
+        }
+    }
+
+    &_link {
+        font-family: $f-text;
+        text-decoration: none;
+        color: $primary-s4;
+
+        @media (max-width: 46.24em) {
+            font-size: 1rem;
+            line-height: 1.5;
+            letter-spacing: -0.2px;
+        }
+
+        @media (min-width: 46.25em) {
+            font-size: 1.125rem;
+            line-height: 1.78;
+        }
+
+        @media screen and (min-width: 1070px) {
+            font-family: $f-subtitle;
+            font-size: 1rem;
+            line-height: 1.63;
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    // TODO
+    &_banner {
+        
+        @media screen and (min-width: 900px) {
+            display: none;
+        }
+        &-desktop {
+            display: none;
+            @media screen and (min-width: 900px) {
+                display: block;
+            }
+        }
+    }
+
+    &_progres-bar {
+        display: none;
+
+        @media screen and (min-width: 900px) {
+            display: flex;
+            // border: 1px solid #888;
+        }
+        
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        width: 100%;
+        height: 4px;
+        border-radius: 4px;
+        background-color: #f4f8fe;
+
+        overflow: hidden;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 4;
+            background-color: var(--bar-bg);
+            transform: translateX(-100%);    
+        }
+        @media screen and (min-width: 900px) {
+            &.is-selected:not(.is-paused) {
+                &:after {
+                    animation: playFeature var(--display-time) linear;
+                }
+            }
+
+            &.is-paused {
+                &:after {
+                    transform: none;
+                }
+            }
+        }
+
+        @keyframes playFeature {
+            0% { transform: translateX(-100%); }
+            to {  transform: none; }
+        }
+    }
+}

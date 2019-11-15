@@ -1,0 +1,139 @@
+@font-face {
+    font-family: "Eina02-Bold";
+    font-display: swap;
+    unicode-range: U+000-5ff;
+    src: local("Eina02-Bold"), url(../assets/fonts/f06f735.woff2) format("woff2"),
+        url(../assets/fonts/c621355.woff) format("woff");
+}
+
+@font-face {
+    font-family: "Roboto-Regular";
+    font-display: swap;
+    unicode-range: U+000-5ff;
+    src: local("Roboto-Regular"), url(../assets/fonts/2643258.woff2) format("woff2"),
+        url(../assets/fonts/22583ca.woff) format("woff");
+}
+
+.a-title {
+    font-family: $f-title;
+    font-weight: 400;
+    font-style: normal;
+
+    &-head-1 {
+        @media (max-width: 46.24em) {
+            font-size: 1.875rem;
+            line-height: 1.22;
+            letter-spacing: -0.2px;
+        }
+
+        @media (min-width: 46.25em) {
+            font-size: 3.75rem;
+            line-height: 1.5;
+            letter-spacing: -1.1px;
+        }
+    }
+    &-head-2 {
+        @media (max-width: 46.24em) {
+            font-size: 1.625rem;
+            line-height: 1.53;
+            letter-spacing: -0.5px;
+        }
+
+        @media (min-width: 46.25em) {
+            font-size: 3.125rem;
+            line-height: 1.28;
+            letter-spacing: -0.9px;
+        }
+    }
+
+    &-head-3 {
+        @media (max-width: 46.24em) {
+            font-size: 1.375rem;
+            line-height: 1.45;
+            letter-spacing: -0.5px;
+        }
+
+        @media (min-width: 46.25em) {
+            font-size: 2.375rem;
+            line-height: 1.47;
+            letter-spacing: -0.8px;
+        }
+    }
+
+    &-head-4 {
+        @media (max-width: 46.24em) {
+            font-size: 1.25rem;
+            line-height: 1.6;
+            letter-spacing: -0.4px;
+        }
+
+        @media (min-width: 46.25em) {
+            font-size: 1.875rem;
+            line-height: 1.33;
+            letter-spacing: -0.2px;
+        }
+    }
+    &-head-5 {
+        @media (max-width: 46.24em) {
+            font-size: 1rem;
+            line-height: 2;
+            letter-spacing: -0.2px;
+        }
+
+        @media (min-width: 46.25em) {
+            font-size: 1.125rem;
+            line-height: 1.78;
+            letter-spacing: -0.2px;
+        }
+    }
+}
+
+.a-subtitle {
+    font-family: $f-subtitle;
+    color: $grey-s4;
+    max-width: 57rem;
+    margin: auto;
+    @media (max-width: 46.24em) {
+        font-size: 1.125rem;
+        line-height: 1.78;
+        letter-spacing: -0.3px;
+    }
+
+    @media (min-width: 46.25em) {
+        font-size: 1.625rem;
+        line-height: 1.54;
+        letter-spacing: -0.4px;
+        margin-top: 16px;
+    }
+}
+.a-text {
+    font-family: $f-text;
+    color: $grey-s4;
+
+    &-sub-2 {
+        @media (max-width: 46.24em) {
+            font-size: 1rem;
+            line-height: 1.5;
+            letter-spacing: -0.2px;
+        }
+
+        @media (min-width: 46.25em) {
+            font-size: 1.375rem;
+            line-height: 1.45;
+            letter-spacing: -0.3px;
+        }
+    }
+
+    &-sub-3 {
+        @media (max-width: 46.24em) {
+            font-size: 1rem;
+            line-height: 1.5;
+            letter-spacing: -0.2px;
+        }
+
+        @media (min-width: 46.25em) {
+            font-size: 1.125rem;
+            line-height: 1.6;
+        }
+    }
+}

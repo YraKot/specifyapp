@@ -1,0 +1,44 @@
+.media {
+    @media (min-width: 46.25em) {
+        width: 100%;
+        max-width: 65.25rem;
+        margin: auto;
+    }
+    &_list {
+        margin-top: 48px;
+
+        @media (min-width: 38.75em) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        @media (min-width: 61.25em) {
+            justify-content: space-between;
+        }
+
+    }
+    &_item {
+        margin-top: 32px;
+        &:first-of-type {
+            margin-top: 0;
+        }
+        @media (min-width: 38.75em) {
+            max-width: 420px;
+        }
+        @media (min-width: 61.25em) {
+            max-width: 390px;
+            &:nth-of-type(2) {
+                margin-top: 0;
+            }
+            margin-top: 92px;
+        }
+        
+    }
+    &_text {
+        @media (min-width: 46.25em){
+            font-size: 1.125rem;
+            line-height: 1.78;
+            margin-top: 8px;
+        }
+    }
+}

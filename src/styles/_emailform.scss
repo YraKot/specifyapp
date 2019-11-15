@@ -1,0 +1,96 @@
+.e-form {
+    &_wrp {
+        display: flex;
+        position: relative;
+        max-width: 350px;
+        margin: auto;
+        @media (min-width: 46.25em) {
+            max-width: 420px;
+        }
+    }
+
+    &_input {
+        display: flex;
+        height: 3.125rem;
+        width: 100%;
+        max-width: calc(100% - 50px);
+        padding-left: 24px;
+        padding-right: 48px;
+        background-color: #fff;
+        border: 1px solid #e5e8eb;
+        border-top-left-radius: 3.125rem;
+        border-bottom-left-radius: 3.125rem;
+        color: rgba(20, 20, 20, 0.64);
+        font-family: $f-text;
+        outline: none;
+        transition: all 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
+
+        @media (max-width: 46.24em) {
+            font-size: 1rem;
+            line-height: 1.5;
+            letter-spacing: -0.2px;
+        }
+
+        @media (min-width: 46.25em) {
+            font-size: 1.125rem;
+            line-height: 1.78;
+            height: 72px;
+        }
+        
+
+        &:focus {
+            border-color: #624de3;
+        }
+
+        &.has-error {
+            border-color: #e88282;
+        }
+        @include placeholder {
+            color: rgba(20, 20, 20, 0.64);
+        }
+    }
+
+    &_submit {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 3.125rem;
+        padding-left: 24px;
+        padding-right: 24px;
+        color: $white;
+        text-decoration: none;
+        border-radius: 3.125rem;
+        background-color: $primary-s4;
+        transition: all 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
+        backface-visibility: hidden;
+        z-index: 10;
+        @media (min-width: 46.25em) {
+            height: 72px;
+        }
+        &:hover {
+            background-color: $primary-s3;
+        }
+
+        &-text {
+            color: inherit;
+            font-family: $f-title;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 1rem;
+            line-height: 1.5;
+            letter-spacing: -0.2px;
+            @media (min-width: 46.25em) {
+                display: none;
+            }
+            &-desktop {
+                display: none;
+                @media (min-width: 46.25em) {
+                    display: block;
+                }
+            }
+        }
+    }
+}
